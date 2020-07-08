@@ -20,7 +20,8 @@ class ViewController: UIViewController, FSCalendarDelegate {
         super.viewDidLoad()
         
         calendar.delegate = self
-        button.isEnabled = false
+        //button.isEnabled = false
+                
     }
     
     
@@ -28,9 +29,9 @@ class ViewController: UIViewController, FSCalendarDelegate {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-YYYY"
-        let string = dateFormatter.string(from: date)
+       // let string = dateFormatter.string(from: date)
         
-        dateText.text = string
+       // dateText.text = string
     }
     
     
@@ -39,27 +40,16 @@ class ViewController: UIViewController, FSCalendarDelegate {
     
     
     @IBAction func dateButton(_ sender: UIButton) {
-        //dateLable.text = dateText.text
+      
+        let input = dateText.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let myDate = dateFormatter.date(from: input)
+        calendar.select(myDate)
+
     }
     
-    @IBAction func dateAction(_ sender: UITextField) {
-        
-        print(sender.text!)
-        
-        if validate(text: sender.text!) {
-            button.isEnabled = true
-        }else{
-            button.isEnabled = false
-            dateLable.text = "Invalid Date"
-            
-        }
-        
-    }
+  
     
-    
-    func validate(text: String) -> Bool {
-        
-        return text == "00/00/0000"
-    }
 }
 
