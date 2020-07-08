@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calenderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00/00/0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-y4-mbp">
+                                <rect key="frame" x="85" y="169" width="244" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hBN-wI-Las"/>
+                                    <constraint firstAttribute="width" constant="244" id="zWn-74-tFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="VWY-mI-fUs"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Date?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-Gq-HFn">
+                                <rect key="frame" x="30" y="124" width="354" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVj-hc-uyu">
+                                <rect key="frame" x="93" y="293" width="228" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5XA-2t-ZGb"/>
+                                    <constraint firstAttribute="width" constant="228" id="717-yP-G2N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH8-4y-kIh">
+                                <rect key="frame" x="100" y="223" width="214" height="30"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="dateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cbh-fs-aPJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-ZB-Pot" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="374" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="vXZ-ux-sDC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bH8-4y-kIh" secondAttribute="trailing" constant="100" id="2Ow-Ab-kco"/>
+                            <constraint firstItem="ITu-Gq-HFn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="3nK-LW-l3h"/>
+                            <constraint firstItem="bH8-4y-kIh" firstAttribute="top" secondItem="X8g-y4-mbp" secondAttribute="bottom" constant="20" id="99p-iD-orM"/>
+                            <constraint firstItem="4V8-ZB-Pot" firstAttribute="top" secondItem="GVj-hc-uyu" secondAttribute="bottom" constant="60" id="JXv-0d-PZk"/>
+                            <constraint firstItem="ITu-Gq-HFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="K1F-DP-8Ti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITu-Gq-HFn" secondAttribute="trailing" constant="30" id="YX5-32-HNa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8g-y4-mbp" secondAttribute="trailing" constant="85" id="axm-sB-6Ay"/>
+                            <constraint firstItem="bH8-4y-kIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fyl-d6-d6i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GVj-hc-uyu" secondAttribute="trailing" constant="93" id="gzf-JB-UjV"/>
+                            <constraint firstItem="GVj-hc-uyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="hZS-jd-kQw"/>
+                            <constraint firstItem="4V8-ZB-Pot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hly-Fj-aky"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4V8-ZB-Pot" secondAttribute="trailing" id="jVf-AC-7qU"/>
+                            <constraint firstItem="GVj-hc-uyu" firstAttribute="top" secondItem="bH8-4y-kIh" secondAttribute="bottom" constant="40" id="kGh-x7-Ibu"/>
+                            <constraint firstItem="X8g-y4-mbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="nZg-qy-NKt"/>
+                            <constraint firstItem="X8g-y4-mbp" firstAttribute="top" secondItem="ITu-Gq-HFn" secondAttribute="bottom" constant="15" id="tg2-Zc-vPl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="bH8-4y-kIh" id="MU3-Ak-Ujg"/>
+                        <outlet property="calendar" destination="4V8-ZB-Pot" id="ECf-vl-M2C"/>
+                        <outlet property="dateLable" destination="GVj-hc-uyu" id="L9K-wr-8fs"/>
+                        <outlet property="dateText" destination="X8g-y4-mbp" id="Koy-jr-5aN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
 </document>
