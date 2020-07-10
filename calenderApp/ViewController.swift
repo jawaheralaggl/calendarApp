@@ -9,47 +9,41 @@
 import UIKit
 import FSCalendar
 
-class ViewController: UIViewController, FSCalendarDelegate {
+protocol CalanderCallback {
+    func userPickedDate (date: String)
+}
+
+class ViewController: UIViewController, FSCalendarDelegate, UITextFieldDelegate, CalanderCallback {
+    
+    
+    func userPickedDate(date: String) {
+        dateText.text = date
+    }
+    
+    
     
     @IBOutlet weak var dateText: UITextField!
     @IBOutlet weak var dateLable: UILabel!
     @IBOutlet weak var button: UIButton!
-    @IBOutlet var calendar: FSCalendar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calendar.delegate = self
+        dateText.becomeFirstResponder()
         //button.isEnabled = false
-                
     }
-    
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-YYYY"
-       // let string = dateFormatter.string(from: date)
-        
-       // dateText.text = string
-    }
-    
-    
-    
-    
     
     
     @IBAction func dateButton(_ sender: UIButton) {
-      
-        let input = dateText.text!
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let myDate = dateFormatter.date(from: input)
-        calendar.select(myDate)
-
+        
+        
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CalendarController") as! CalendarController
+        vc.textContent = dateText.text!
+        vc.calnderCallbackObj = self
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-  
-    
 }
-
