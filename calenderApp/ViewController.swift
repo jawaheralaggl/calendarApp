@@ -42,6 +42,7 @@ class ViewController: UIViewController, FSCalendarDelegate, UITextFieldDelegate,
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CalendarController") as! CalendarController
         vc.textContent = dateText.text!
         vc.calnderCallbackObj = self
+        UserDefaults.init(suiteName: "group.com.jawaher.widget")?.setValue(dateText.text, forKey: "name")
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

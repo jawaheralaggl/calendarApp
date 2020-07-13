@@ -28,7 +28,7 @@ class CustomCalanderCell : FSCalendarCell {
         selectionLayer.fillColor = UIColor.white.withAlphaComponent(0).cgColor
         self.contentView.layer.insertSublayer(selectionLayer, below: self.titleLabel!.layer)
         // let contentBounds = contentView.bounds
-        let myBounds = CGRect(x: 17, y: 2, width: 3, height: 3)
+        let myBounds = CGRect(x: 17.8, y: 2.8, width: 2, height: 2)
         self.selectionLayer.frame = myBounds
         
         self.selectionLayer.path = UIBezierPath(roundedRect: myBounds, byRoundingCorners: [.allCorners], cornerRadii: CGSize(width:5, height:5)).cgPath

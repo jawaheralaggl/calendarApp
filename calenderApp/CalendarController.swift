@@ -22,7 +22,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     var calnderCallbackObj : CalanderCallback?
     var currentDateStr : String = ""
     
-    
+   // let k = Properties(Calendar: FSCalendar)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,22 +36,24 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         calendar.allowsMultipleSelection = false
         view.addSubview(calendar)
         self.calendar = calendar
-        
-        calendar.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
-        calendar.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
-        calendar.appearance.eventSelectionColor = UIColor.white
-        calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
-        calendar.today = nil // Hide the today circle
-        calendar.firstWeekday = 2
-        calendar.appearance.headerTitleColor = UIColor.white
+        calendar.appearance.headerTitleColor = .white
         calendar.appearance.titleDefaultColor = .white
         calendar.appearance.weekdayTextColor = .lightGray
         calendar.appearance.headerMinimumDissolvedAlpha = (0)
         calendar.appearance.weekdayFont = UIFont.init(name: "Fonts.RalewayRegular", size: 16)
         calendar.appearance.headerTitleFont = UIFont.init(name: "Fonts.RalewayRegular", size: 25)
         calendar.weekdayHeight = (36)
+        calendar.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
+        calendar.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
+        calendar.appearance.eventSelectionColor = .white
+        calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
+        calendar.today = nil // Hide the today circle
+        calendar.firstWeekday = 2
+        
+       // k.calendarAppearance()
         
         
+       // k.dateCalendar()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         let myDate = dateFormatter.date(from: textContent)
@@ -73,7 +75,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         self.configure(cell: cell, for: date, at: position)
     }
     
-    private func configureVisibleCells() {
+    public func configureVisibleCells() {
         calendar.visibleCells().forEach { (cell) in
             let date = calendar.date(for: cell)
             let position = calendar.monthPosition(for: cell)
@@ -99,6 +101,8 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
+        // k.dateText()
+
         self.configureVisibleCells()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
@@ -117,6 +121,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         
         if let Controller = self.navigationController {
             calnderCallbackObj?.userPickedDate(date: currentDateStr)
+            UserDefaults.init(suiteName: "group.com.jawaher.widget")?.setValue(currentDateStr, forKey: "name2")
             Controller.popViewController(animated: true)
         }
         
