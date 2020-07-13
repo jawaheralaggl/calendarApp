@@ -11,38 +11,41 @@ import UIKit
 import FSCalendar
 
 
+
 class CustomCalanderCell : FSCalendarCell {
     
-    var selectionLayer: CAShapeLayer!
     required init!(coder aDecoder: NSCoder!) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
+    let whiteDot = UIView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        selectionLayer = CAShapeLayer()
+        let widthAndHeight = 2
+        let cornerRadius = widthAndHeight / 2
         
-        selectionLayer.actions = ["hidden": NSNull()]
-        selectionLayer.fillColor = UIColor.white.withAlphaComponent(0).cgColor
-        self.contentView.layer.insertSublayer(selectionLayer, below: self.titleLabel!.layer)
-        // let contentBounds = contentView.bounds
-        let myBounds = CGRect(x: 17.8, y: 2.8, width: 2, height: 2)
-        self.selectionLayer.frame = myBounds
+        whiteDot.backgroundColor = .white
+        whiteDot.frame.size = CGSize(width: widthAndHeight, height: widthAndHeight)
+        whiteDot.layer.cornerRadius = CGFloat(cornerRadius)
+        whiteDot.center = CGPoint(x: contentView.bounds.width * (0.6),
+                                  y: contentView.bounds.height * (1/6))
         
-        self.selectionLayer.path = UIBezierPath(roundedRect: myBounds, byRoundingCorners: [.allCorners], cornerRadii: CGSize(width:5, height:5)).cgPath
+        contentView.addSubview(whiteDot)
+        
     }
-    
     
     
     
     public func showDot (){
-        selectionLayer.fillColor = UIColor.white.cgColor
+        whiteDot.backgroundColor = .white
     }
     
     public func hideDot () {
-        selectionLayer.fillColor = UIColor.white.withAlphaComponent(0).cgColor
+        whiteDot.backgroundColor = UIColor.white.withAlphaComponent(0)
     }
+    
     
 }

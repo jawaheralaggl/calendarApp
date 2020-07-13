@@ -84,9 +84,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-ZC-1Uc">
-                                <rect key="frame" x="182" y="536" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-ZC-1Uc">
+                                <rect key="frame" x="122" y="528" width="170" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="FFK-2M-izT"/>
+                                    <constraint firstAttribute="height" constant="60" id="kcu-Tl-XrH"/>
+                                </constraints>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="dismiss:" destination="cEa-he-Gzu" eventType="touchUpInside" id="gn2-NY-k5K"/>
@@ -94,6 +97,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1046722457" green="0.12774011490000001" blue="0.16684100029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WlR-ZC-1Uc" secondAttribute="trailing" constant="102" id="2gx-RC-OLS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="WlR-ZC-1Uc" secondAttribute="bottom" constant="274" id="6jf-TC-z34"/>
+                            <constraint firstItem="WlR-ZC-1Uc" firstAttribute="leading" secondItem="Exx-jM-wPc" secondAttribute="leadingMargin" constant="102" id="93u-2r-ulA"/>
+                            <constraint firstItem="WlR-ZC-1Uc" firstAttribute="top" secondItem="Exx-jM-wPc" secondAttribute="topMargin" constant="484" id="iUu-7o-a0z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iTW-rs-DvX"/>
                     </view>
                 </viewController>
