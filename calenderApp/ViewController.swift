@@ -37,8 +37,6 @@ class ViewController: UIViewController, FSCalendarDelegate, UITextFieldDelegate,
     
     @IBAction func dateButton(_ sender: UIButton) {
         
-        
-        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CalendarController") as! CalendarController
         vc.textContent = dateText.text!
         vc.calnderCallbackObj = self

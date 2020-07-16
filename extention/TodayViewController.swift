@@ -11,6 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var dateShow: UIButton!
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
            label.text = name2 as? String
         }
     }
+    
+    
+    @IBAction func dateButton(_ sender: Any) {
+        if let url = URL(string: "calWidget://recent") {
+        extensionContext?.open(url, completionHandler: nil)
+        }
         
+    }
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         

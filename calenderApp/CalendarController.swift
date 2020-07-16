@@ -13,6 +13,22 @@ import FSCalendar
 
 class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
     
+    let dateFormatter = DateFormatter()
+    
+    var dateFormat = "dd/MM/yyyy"
+    var headerTitleColor = UIColor.white
+    var titleDefaultColor = UIColor.white
+    var weekdayTextColor = UIColor.lightGray
+    var headerMinimumDissolvedAlpha = CGFloat(0)
+    var weekdayFont = UIFont.init(name: "Fonts.RalewayRegular", size: 16)
+    var headerTitleFont = UIFont.init(name: "Fonts.RalewayRegular", size: 25)
+    var eventSelectionColor = UIColor.white
+    var eventOffset = CGPoint(x: 0, y: -7)
+    var firstWeekday = UInt(2)
+    var weekdayHeight = CGFloat(36)
+    var calanderHeaderViewBG = UIColor.lightGray.withAlphaComponent(0)
+    
+    
     var selectedName: String = "Anonymous"
     weak var delegate: ViewController!
     
@@ -36,26 +52,24 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         calendar.allowsMultipleSelection = false
         view.addSubview(calendar)
         self.calendar = calendar
-        calendar.appearance.headerTitleColor = .white
-        calendar.appearance.titleDefaultColor = .white
-        calendar.appearance.weekdayTextColor = .lightGray
-        calendar.appearance.headerMinimumDissolvedAlpha = (0)
-        calendar.appearance.weekdayFont = UIFont.init(name: "Fonts.RalewayRegular", size: 16)
-        calendar.appearance.headerTitleFont = UIFont.init(name: "Fonts.RalewayRegular", size: 25)
-        calendar.weekdayHeight = (36)
-        calendar.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
-        calendar.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0)
-        calendar.appearance.eventSelectionColor = .white
-        calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
+        calendar.weekdayHeight = weekdayHeight
+        calendar.calendarHeaderView.backgroundColor = calanderHeaderViewBG
+        calendar.calendarWeekdayView.backgroundColor = calanderHeaderViewBG
         calendar.today = nil // Hide the today circle
-        calendar.firstWeekday = 2
-        
-       // k.calendarAppearance()
+        calendar.firstWeekday = firstWeekday
+        calendar.appearance.headerTitleColor = headerTitleColor
+        calendar.appearance.titleDefaultColor = titleDefaultColor
+        calendar.appearance.weekdayTextColor = weekdayTextColor
+        calendar.appearance.headerMinimumDissolvedAlpha = headerMinimumDissolvedAlpha
+        calendar.appearance.weekdayFont = weekdayFont
+        calendar.appearance.headerTitleFont = headerTitleFont
+        calendar.appearance.eventSelectionColor = eventSelectionColor
+        calendar.appearance.eventOffset = eventOffset
+
         
         
        // k.dateCalendar()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = dateFormat
         let myDate = dateFormatter.date(from: textContent)
         calendar.select(myDate)
         
@@ -104,8 +118,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         // k.dateText()
 
         self.configureVisibleCells()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = dateFormat
         currentDateStr = dateFormatter.string(from: date)
         
         
@@ -117,7 +130,6 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     
     
     @IBAction func dismiss(_ sender: UIButton) {
-        
         
         if let Controller = self.navigationController {
             calnderCallbackObj?.userPickedDate(date: currentDateStr)

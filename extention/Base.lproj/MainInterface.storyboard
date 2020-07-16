@@ -22,14 +22,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-ma-VHB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                <connections>
+                                    <action selector="dateButton:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hQE-XV-Qbt"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FHd-ma-VHB" secondAttribute="trailing" id="Kel-Ex-crJ"/>
+                            <constraint firstItem="FHd-ma-VHB" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="LFj-wC-yPL"/>
+                            <constraint firstItem="FHd-ma-VHB" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="LIq-Ds-YdA"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="FHd-ma-VHB" secondAttribute="bottom" id="gth-0E-ZmC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
-                        <outlet property="label" destination="u5M-Nc-XaX" id="r6R-XY-dWs"/>
+                        <outlet property="dateShow" destination="FHd-ma-VHB" id="CgJ-Qr-Kr1"/>
+                        <outlet property="label" destination="u5M-Nc-XaX" id="FxY-8S-QwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
