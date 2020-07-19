@@ -13,6 +13,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var dateShow: UIButton!
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

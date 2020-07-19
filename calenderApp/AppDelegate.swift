@@ -14,9 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+    
+            return true
+        }
+      
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -31,22 +33,8 @@ var window: UIWindow?
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
 
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        if shortcutItem.type == "com.jaDanRA.calenderApp.open" {
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let targetVC = storyboard.instantiateViewController(withIdentifier :"CalendarController") as! CalendarController
-            
-            // window?.rootViewController?.present(CalendarController(), animated: true, completion: nil)
-            
-            if let navC = window?.rootViewController as! UINavigationController? {
-            navC.pushViewController(targetVC, animated: false)
-            }
-            
-            print("Quick Action Is Works!")
-        }
-    }
-
+  
+       
 }
-

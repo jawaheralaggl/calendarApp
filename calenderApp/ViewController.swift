@@ -30,6 +30,7 @@ class ViewController: UIViewController, FSCalendarDelegate, UITextFieldDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         dateText.becomeFirstResponder()
         //button.isEnabled = false
     }

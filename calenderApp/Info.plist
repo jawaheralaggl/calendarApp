@@ -5,12 +5,12 @@
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>com.jaDanRA.calenderApp.open</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.jaDanRA.calenderApp.openCalendar</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>open</string>
+			<string>open calendar</string>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string>UIApplicationShortcutIconTypeCompose</string>
+			<string>open-favorites</string>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

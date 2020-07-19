@@ -16,6 +16,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     let dateFormatter = DateFormatter()
     
     var dateFormat = "dd/MM/yyyy"
+    
     var headerTitleColor = UIColor.white
     var titleDefaultColor = UIColor.white
     var weekdayTextColor = UIColor.lightGray
@@ -38,7 +39,6 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     var calnderCallbackObj : CalanderCallback?
     var currentDateStr : String = ""
     
-   // let k = Properties(Calendar: FSCalendar)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,10 +65,10 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
         calendar.appearance.headerTitleFont = headerTitleFont
         calendar.appearance.eventSelectionColor = eventSelectionColor
         calendar.appearance.eventOffset = eventOffset
-
         
         
-       // k.dateCalendar()
+        
+        // k.dateCalendar()
         dateFormatter.dateFormat = dateFormat
         let myDate = dateFormatter.date(from: textContent)
         calendar.select(myDate)
@@ -116,7 +116,7 @@ class CalendarController: UIViewController, FSCalendarDataSource, FSCalendarDele
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         // k.dateText()
-
+        
         self.configureVisibleCells()
         dateFormatter.dateFormat = dateFormat
         currentDateStr = dateFormatter.string(from: date)
