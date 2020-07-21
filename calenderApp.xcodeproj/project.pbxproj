@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50DFF2624B85CEA002C0E46 /* CustomCalanderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DFF2524B85CEA002C0E46 /* CustomCalanderCell.swift */; };
+		A5433C2024B5F74100469B01 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5433C1F24B5F74100469B01 /* CalendarController.swift */; };
+		A5A2670424BC499A00A65191 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A2670324BC499A00A65191 /* NotificationCenter.framework */; };
+		A5A2670724BC499A00A65191 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2670624BC499A00A65191 /* TodayViewController.swift */; };
+		A5A2670A24BC499A00A65191 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A2670824BC499A00A65191 /* MainInterface.storyboard */; };
+		A5A2670E24BC499A00A65191 /* extention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A5A2670224BC499A00A65191 /* extention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A5A8EEAD24BC31970034BAEF /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8EEAC24BC31970034BAEF /* Properties.swift */; };
 		A5E443F724B52D2400C911F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E443F624B52D2400C911F9 /* AppDelegate.swift */; };
 		A5E443F924B52D2400C911F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E443F824B52D2400C911F9 /* SceneDelegate.swift */; };
 		A5E443FB24B52D2400C911F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E443FA24B52D2400C911F9 /* ViewController.swift */; };
@@ -16,9 +23,43 @@
 		A6729F87F4DD6AF6F2AA717B /* Pods_calenderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA7A03F7692073D7D1B5702 /* Pods_calenderApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A5A2670C24BC499A00A65191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E443EB24B52D2400C911F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5A2670124BC499A00A65191;
+			remoteInfo = extention;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5A2670F24BC499A00A65191 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5A2670E24BC499A00A65191 /* extention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2CA7A03F7692073D7D1B5702 /* Pods_calenderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calenderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8755C0C64927DA655CAE3873 /* Pods-calenderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calenderApp.debug.xcconfig"; path = "Target Support Files/Pods-calenderApp/Pods-calenderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A50DFF2524B85CEA002C0E46 /* CustomCalanderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalanderCell.swift; sourceTree = "<group>"; };
+		A5433C1F24B5F74100469B01 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		A5A2670224BC499A00A65191 /* extention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A2670324BC499A00A65191 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A5A2670624BC499A00A65191 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A5A2670924BC499A00A65191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A5A2670B24BC499A00A65191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A2671324BC4A4700A65191 /* calenderApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = calenderApp.entitlements; sourceTree = "<group>"; };
+		A5A2671424BC4A8000A65191 /* extention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extention.entitlements; sourceTree = "<group>"; };
+		A5A8EEAC24BC31970034BAEF /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		A5E443F324B52D2400C911F9 /* calenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E443F624B52D2400C911F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E443F824B52D2400C911F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +72,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A5A266FF24BC499A00A65191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A2670424BC499A00A65191 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5E443F024B52D2400C911F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA7A03F7692073D7D1B5702 /* Pods_calenderApp.framework */,
+				A5A2670324BC499A00A65191 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,14 +106,25 @@
 				8755C0C64927DA655CAE3873 /* Pods-calenderApp.debug.xcconfig */,
 				C9299ED8E6777D61F98F2626 /* Pods-calenderApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5A2670524BC499A00A65191 /* extention */ = {
+			isa = PBXGroup;
+			children = (
+				A5A2671424BC4A8000A65191 /* extention.entitlements */,
+				A5A2670624BC499A00A65191 /* TodayViewController.swift */,
+				A5A2670824BC499A00A65191 /* MainInterface.storyboard */,
+				A5A2670B24BC499A00A65191 /* Info.plist */,
+			);
+			path = extention;
 			sourceTree = "<group>";
 		};
 		A5E443EA24B52D2400C911F9 = {
 			isa = PBXGroup;
 			children = (
 				A5E443F524B52D2400C911F9 /* calenderApp */,
+				A5A2670524BC499A00A65191 /* extention */,
 				A5E443F424B52D2400C911F9 /* Products */,
 				46E2408E3E7F478219F4F07A /* Pods */,
 				465330C76392ADFEA4BF68E4 /* Frameworks */,
@@ -74,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E443F324B52D2400C911F9 /* calenderApp.app */,
+				A5A2670224BC499A00A65191 /* extention.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,12 +143,16 @@
 		A5E443F524B52D2400C911F9 /* calenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5A2671324BC4A4700A65191 /* calenderApp.entitlements */,
 				A5E443F624B52D2400C911F9 /* AppDelegate.swift */,
 				A5E443F824B52D2400C911F9 /* SceneDelegate.swift */,
 				A5E443FA24B52D2400C911F9 /* ViewController.swift */,
+				A5433C1F24B5F74100469B01 /* CalendarController.swift */,
 				A5E443FC24B52D2400C911F9 /* Main.storyboard */,
 				A5E443FF24B52D2600C911F9 /* Assets.xcassets */,
+				A50DFF2524B85CEA002C0E46 /* CustomCalanderCell.swift */,
 				A5E4440124B52D2600C911F9 /* LaunchScreen.storyboard */,
+				A5A8EEAC24BC31970034BAEF /* Properties.swift */,
 				A5E4440424B52D2600C911F9 /* Info.plist */,
 			);
 			path = calenderApp;
@@ -95,6 +161,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A5A2670124BC499A00A65191 /* extention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A2671224BC499A00A65191 /* Build configuration list for PBXNativeTarget "extention" */;
+			buildPhases = (
+				A5A266FE24BC499A00A65191 /* Sources */,
+				A5A266FF24BC499A00A65191 /* Frameworks */,
+				A5A2670024BC499A00A65191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = extention;
+			productName = extention;
+			productReference = A5A2670224BC499A00A65191 /* extention.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A5E443F224B52D2400C911F9 /* calenderApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5E4440724B52D2600C911F9 /* Build configuration list for PBXNativeTarget "calenderApp" */;
@@ -104,10 +187,12 @@
 				A5E443F024B52D2400C911F9 /* Frameworks */,
 				A5E443F124B52D2400C911F9 /* Resources */,
 				BE62609BF3308F21E7E62AD3 /* [CP] Embed Pods Frameworks */,
+				A5A2670F24BC499A00A65191 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A5A2670D24BC499A00A65191 /* PBXTargetDependency */,
 			);
 			name = calenderApp;
 			productName = calenderApp;
@@ -124,6 +209,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jawaher Alaggl";
 				TargetAttributes = {
+					A5A2670124BC499A00A65191 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					A5E443F224B52D2400C911F9 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -143,11 +231,20 @@
 			projectRoot = "";
 			targets = (
 				A5E443F224B52D2400C911F9 /* calenderApp */,
+				A5A2670124BC499A00A65191 /* extention */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A5A2670024BC499A00A65191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A2670A24BC499A00A65191 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5E443F124B52D2400C911F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,11 +300,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A5A266FE24BC499A00A65191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A2670724BC499A00A65191 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5E443EF24B52D2400C911F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A8EEAD24BC31970034BAEF /* Properties.swift in Sources */,
+				A50DFF2624B85CEA002C0E46 /* CustomCalanderCell.swift in Sources */,
 				A5E443FB24B52D2400C911F9 /* ViewController.swift in Sources */,
+				A5433C2024B5F74100469B01 /* CalendarController.swift in Sources */,
 				A5E443F724B52D2400C911F9 /* AppDelegate.swift in Sources */,
 				A5E443F924B52D2400C911F9 /* SceneDelegate.swift in Sources */,
 			);
@@ -215,7 +323,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A5A2670D24BC499A00A65191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5A2670124BC499A00A65191 /* extention */;
+			targetProxy = A5A2670C24BC499A00A65191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		A5A2670824BC499A00A65191 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A2670924BC499A00A65191 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		A5E443FC24B52D2400C911F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -235,6 +359,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A5A2671024BC499A00A65191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extention/extention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W4MA25Y33;
+				INFOPLIST_FILE = extention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaDanRA.calenderApp.extention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5A2671124BC499A00A65191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extention/extention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W4MA25Y33;
+				INFOPLIST_FILE = extention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaDanRA.calenderApp.extention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A5E4440524B52D2600C911F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -353,7 +517,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8755C0C64927DA655CAE3873 /* Pods-calenderApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = calenderApp/calenderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W4MA25Y33;
 				INFOPLIST_FILE = calenderApp/Info.plist;
@@ -372,7 +538,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9299ED8E6777D61F98F2626 /* Pods-calenderApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = calenderApp/calenderApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W4MA25Y33;
 				INFOPLIST_FILE = calenderApp/Info.plist;
@@ -390,6 +558,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A5A2671224BC499A00A65191 /* Build configuration list for PBXNativeTarget "extention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A2671024BC499A00A65191 /* Debug */,
+				A5A2671124BC499A00A65191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5E443EE24B52D2400C911F9 /* Build configuration list for PBXProject "calenderApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
